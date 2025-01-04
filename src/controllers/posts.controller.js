@@ -3,7 +3,7 @@ import Posts from "../models/posts.model.js";
 import Users from "../models/users.model.js";
 
 const getAllPost = async (req, res) => {
-    const posts = await Posts.find({}).populate("comments").populate("likes")
+    const posts = await Posts.find({})
     res.json({
         posts
     })
